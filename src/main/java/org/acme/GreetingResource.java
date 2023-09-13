@@ -24,14 +24,12 @@ public class GreetingResource {
     }
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
     public Uni<List<Book>> hello() {
         return bookService.findAll();
     }
 
     @GET
     @Path("/add")
-    @Produces(MediaType.TEXT_PLAIN)
     public Uni<Book> add() {
         return bookService.add();
     }

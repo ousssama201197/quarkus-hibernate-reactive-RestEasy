@@ -1,25 +1,21 @@
 package org.acme.entities;
 
-import java.math.BigDecimal;
-
-import jakarta.persistence.Cacheable;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.Size;
+import lombok.Data;
 
-//@Data
-//@NoArgsConstructor
 @Entity
-@Cacheable
+@Data
 @Table(name = "books")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "title")
     private String title;
 
     public Book(String title) {
