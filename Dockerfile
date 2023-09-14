@@ -1,6 +1,6 @@
 FROM adoptopenjdk/maven-openjdk11 as build
 WORKDIR /app
-COPY ../../../ . 
+COPY . . 
 RUN mvn install
 
 
