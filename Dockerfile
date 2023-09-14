@@ -1,4 +1,4 @@
-FROM adoptopenjdk/maven-openjdk11 as build
+FROM adoptopenjdk/maven-openjdk11 AS build
 WORKDIR /app
 COPY . . 
 RUN mvn install
