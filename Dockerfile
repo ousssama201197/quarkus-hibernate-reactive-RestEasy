@@ -1,4 +1,5 @@
 FROM adoptopenjdk/maven-openjdk11 AS build
+RUN mkdir -p /app
 WORKDIR /app
 COPY . . 
 RUN echo "$PWD"
