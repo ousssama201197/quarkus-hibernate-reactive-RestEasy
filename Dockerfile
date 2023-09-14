@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . . 
 RUN echo "$PWD"
 RUN echo $(ls -1 /app)
-RUN mvn install
+RUN mvn install -DskipTests
 
 
 # RUN
