@@ -1,7 +1,8 @@
 FROM adoptopenjdk/maven-openjdk11 AS build
 WORKDIR /app
 COPY . . 
-COPY pom.xml /app/pom.xml
+RUN echo "$PWD"
+RUN echo $(ls - /app)
 RUN mvn install
 
 
